@@ -490,7 +490,10 @@ const data = {
     },
     'Magalang': {
         barangays: [
-            'Barangay Magalang 1', 'Barangay Magalang 2' // Replace with actual barangays
+            'Amsic', 'Ayala', 'Bagong Sikat', 'Bano', 'Bulaon', 'Calumpang', 'Cutud', 
+            'Del Carmen', 'Dela Paz', 'Gugo', 'Laug', 'Longos', 'Macabulos', 'Magsaysay',
+            'Mamag', 'Pandacaqui', 'Poblacion', 'San Agustin', 'San Isidro', 'San Jose',
+            'San Pedro', 'Santo Domingo', 'Santo Rosario', 'Sapang Maisac', 'San Vicente'
         ],
         streets: [
             'Street 1', 'Street 2', 'Street 3', 'Street 4', 'Street 5', 'Street 6', 
@@ -499,7 +502,10 @@ const data = {
             'Street 19', 'Street 20'
         ],
         districts: [
-            'District Magalang A', 'District Magalang B' // Replace with actual districts
+           'District 1', 'District 2', 'District 3', 'District 4', 'District 5', 
+            'District 6', 'District 7', 'District 8', 'District 9', 'District 10', 
+            'District 11', 'District 12', 'District 13', 'District 14', 'District 15', 
+            'District 16', 'District 17', 'District 18', 'District 19', 'District 20'
         ],
         provinces: [
             'Pampanga'
@@ -517,7 +523,10 @@ const data = {
     },
     'Mexico': {
         barangays: [
-            'Barangay Mexico 1', 'Barangay Mexico 2' // Replace with actual barangays
+           'Bagong Bario', 'Bulaon', 'Calumpang', 'Dela Paz', 'Del Rosario', 'Lagundi', 
+           'Longos', 'Magalang', 'Mabalacat', 'Matapat', 'Magsaysay', 'San Antonio',
+            'San Jose', 'San Miguel', 'San Vicente', 'Santa Monica', 'Santo Niño', 
+            'Santo Rosario'
         ],
         streets: [
             'Street 1', 'Street 2', 'Street 3', 'Street 4', 'Street 5', 'Street 6', 
@@ -547,7 +556,9 @@ const data = {
  },
     'Santa Ana': {
         barangays: [
-            'Barangay Santa Ana 1', 'Barangay Santa Ana 2' // Replace with actual barangays
+            'Babo Pangulo', 'Bagumbayan', 'Bulaon', 'Dela Paz', 'Dulong Bayan', 
+            'Lubao', 'Manibaug', 'Pambuan', 'Poblacion', 'San Antonio', 'San Pedro', 
+            'San Vicente', 'Santa Cruz', 'Santa Rita', 'Santo Domingo'
         ],
         streets: [
            'Street 1', 'Street 2', 'Street 3', 'Street 4', 'Street 5', 'Street 6', 
@@ -577,7 +588,10 @@ const data = {
     },
     'San Fernando': {
         barangays: [
-            'Barangay San Fernando 1', 'Barangay San Fernando 2' // Replace with actual barangays
+            'Baliti', 'Bulaon', 'Del Pilar', 'Dolores', 'Dela Paz Norte', 'Dela Paz Sur',
+             'Guembe', 'Lagundian', 'San Agustin', 'San Isidro', 'San Jose', 'San Juan', 
+             'San Nicolas', 'Santo Rosario', 'San Pedro', 'San Vicente', 'Santo Tomas',
+              'Santa Lucia', 'Santa Teresita'
         ],
         streets: [
           'Street 1', 'Street 2', 'Street 3', 'Street 4', 'Street 5', 'Street 6', 
@@ -607,7 +621,11 @@ const data = {
     },
     'Candaba': {
         barangays: [
-            'Barangay Candaba 1', 'Barangay Candaba 2' // Replace with actual barangays
+            'Abar 1st', 'Abar 2nd', 'Bacolor', 'Bagang', 'Banga', 'Bulaon', 'Calumpang',
+             'Concepcion', 'Dela Paz', 'Del Rosario', 'Dolores', 'Laoang', 'Longos',
+              'Mangga', 'Mangunang', 'Masamat', 'Minalin', 'Paguet', 'Poblacion',
+            'San Antonio', 'San Bartolome', 'San Isidro', 'San Jose', 'San Luis',
+             'San Pedro', 'San Vicente', 'Santo Niño', 'Santo Rosario', 'Santa Teresita'
         ],
         streets: [
             'Street 1', 'Street 2', 'Street 3', 'Street 4', 'Street 5', 'Street 6', 
