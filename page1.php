@@ -423,8 +423,10 @@ const data = {
     },
     'San Vicente': {
         barangays: [
-            'Arenas', 'Baliti', 'Batasan', 'Buensuceso', 'Candating', 'Gatiawin', 
-            'Guemasan', 'La Paz (Turu)'
+            'Aplaya', 'Bagong Sikat', 'Bunga', 'Calabangan', 'Catug-a', 'Concepcion',
+            'Dalan Bago', 'Dapdap', 'Gapan', 'Iba', 'Labi', 'Lakas', 'Labi-Labi', 
+            'Lagundian', 'Ligtong', 'Magsaysay', 'Maligaya', 'Magsaysay Norte', 'Pias',
+            'San Jose', 'San Vicente', 'Santo Domingo', 'Santo Niño', 'Silangan', 'Suyoc'
         ],
         streets: [
             'Street 1', 'Street 2', 'Street 3', 'Street 4', 'Street 5', 'Street 6', 
@@ -454,7 +456,11 @@ const data = {
     },
     'Cabiao': {
         barangays: [
-            'Barangay 1', 'Barangay 2', 'Barangay 3' // Replace with actual barangays
+            'Bagong Buhay ("Lote")', 'Bagong Sikat', 'Bagong Silang', 'Concepcion', 'Entablado', 
+            'Maligaya', 'Natividad North (Pob.)', 'Natividad South (Pob.)', 'Palasinan', 
+            'San Antonio ("Pantalan")', 'San Fernando Norte', 'San Fernando Sur', 'San Gregorio',
+            'San Juan North (Pob.)', 'San Juan South (Pob.)', 'San Roque', 'San Vicente', 
+            'Santa Rita', 'Sinipit', 'Polilio', 'San Carlos', 'Santa Isabel', 'Santa Ines'
         ],
         streets: [
             'Street 1', 'Street 2', 'Street 3', 'Street 4', 'Street 5', 'Street 6', 
