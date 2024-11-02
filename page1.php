@@ -319,6 +319,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <option value="">Select City/Municipality</option>
                         <option value="Arayat">Arayat</option>
                         <option value="Nueva Ecija">Nueva Ecija</option>
+                        <option value="Magalang">Magalang</option>
+                        <option value="Magalang">Magalang</option>
+                        <option value="Mexico">Mexico</option>
+                        <option value="Santa Ana">Santa Ana</option>
+                        <option value="San Fernando">San Fernando</option>
+                        <option value="Candaba">Candaba</option>
                     </select>
 
 
@@ -428,6 +434,96 @@ const data = {
             'Region 3' // Replace with actual regions
         ],
         nationalities: ['Filipino']
+    },
+    'Magalang': {
+        barangays: [
+            'Barangay Magalang 1', 'Barangay Magalang 2' // Replace with actual barangays
+        ],
+        streets: [
+            'Street Magalang A', 'Street Magalang B' // Replace with actual streets
+        ],
+        districts: [
+            'District Magalang A', 'District Magalang B' // Replace with actual districts
+        ],
+        provinces: [
+            'Pampanga'
+        ],
+        regions: [
+            'Region 3' // Replace with actual regions
+        ],
+        nationalities: ['Filipino']
+    },
+    'Mexico': {
+        barangays: [
+            'Barangay Mexico 1', 'Barangay Mexico 2' // Replace with actual barangays
+        ],
+        streets: [
+            'Street Mexico A', 'Street Mexico B' // Replace with actual streets
+        ],
+        districts: [
+            'District Mexico A', 'District Mexico B' // Replace with actual districts
+        ],
+        provinces: [
+            'Pampanga'
+        ],
+        regions: [
+            'Region 3' // Replace with actual regions
+        ],
+        nationalities: ['Filipino']
+ },
+    'Santa Ana': {
+        barangays: [
+            'Barangay Santa Ana 1', 'Barangay Santa Ana 2' // Replace with actual barangays
+        ],
+        streets: [
+            'Street Santa Ana A', 'Street Santa Ana B' // Replace with actual streets
+        ],
+        districts: [
+            'District Santa Ana A', 'District Santa Ana B' // Replace with actual districts
+        ],
+        provinces: [
+            'Pampanga'
+        ],
+        regions: [
+            'Region 3' // Replace with actual regions
+        ],
+        nationalities: ['Filipino']
+    },
+    'San Fernando': {
+        barangays: [
+            'Barangay San Fernando 1', 'Barangay San Fernando 2' // Replace with actual barangays
+        ],
+        streets: [
+            'Street San Fernando A', 'Street San Fernando B' // Replace with actual streets
+        ],
+        districts: [
+            'District San Fernando A', 'District San Fernando B' // Replace with actual districts
+        ],
+        provinces: [
+            'Pampanga'
+        ],
+        regions: [
+            'Region 3' // Replace with actual regions
+        ],
+        nationalities: ['Filipino']
+    },
+    'Candaba': {
+        barangays: [
+            'Barangay Candaba 1', 'Barangay Candaba 2' // Replace with actual barangays
+        ],
+        streets: [
+            'Street Candaba A', 'Street Candaba B' // Replace with actual streets
+        ],
+        districts: [
+            'District Candaba A', 'District Candaba B' // Replace with actual districts
+        ],
+        provinces: [
+            'Pampanga'
+        ],
+        regions: [
+            'Region 3' // Replace with actual regions
+        ],
+        nationalities: ['Filipino']
     }
 };
 
@@ -483,17 +579,9 @@ function updateStreets() {
     document.getElementById('address_region').disabled = true;
     document.getElementById('nationality').disabled = true;
 
-    if (selectedCity === 'Arayat') {
+    if (['Arayat', 'Nueva Ecija', 'Magalang', 'Mexico', 'Santa Ana', 'San Fernando', 'Candaba'].includes(selectedCity)) {
         streetSelect.disabled = false;
-        data['Arayat'].streets.forEach(street => {
-            const option = document.createElement('option');
-            option.value = street;
-            option.text = street;
-            streetSelect.appendChild(option);
-        });
-    } else if (selectedCity === 'Nueva Ecija') {
-        streetSelect.disabled = false;
-        data['Nueva Ecija'].streets.forEach(street => {
+        data[selectedCity].streets.forEach(street => {
             const option = document.createElement('option');
             option.value = street;
             option.text = street;
@@ -517,21 +605,13 @@ function updateDistricts() {
     document.getElementById('address_region').disabled = true;
     document.getElementById('nationality').disabled = true;
 
-    if (selectedCity === 'Arayat') {
+    if (['Arayat', 'Nueva Ecija', 'Magalang', 'Mexico', 'Santa Ana', 'San Fernando', 'Candaba'].includes(selectedCity)) {
         districtSelect.disabled = false;
-        data['Arayat'].districts.forEach(district => {
+        data[selectedCity].districts.forEach(district => {
             const option = document.createElement('option');
             option.value = district;
             option.text = district;
-            districtSelect.appendChild(option);
-        });
-    } else if (selectedCity === 'Nueva Ecija') {
-        districtSelect.disabled = false;
-        data['Nueva Ecija'].districts.forEach(district => {
-            const option = document.createElement('option');
-            option.value = district;
-            option.text = district;
-            districtSelect.appendChild(option);
+            districtSelect.appendChild (option);
         });
     }
 }
@@ -549,17 +629,9 @@ function updateProvinces() {
     document.getElementById('address_region').disabled = true;
     document.getElementById('nationality').disabled = true;
 
-    if (selectedCity === 'Arayat') {
+    if (['Arayat', 'Nueva Ecija', 'Magalang', 'Mexico', 'Santa Ana', 'San Fernando', 'Candaba'].includes(selectedCity)) {
         provinceSelect.disabled = false;
-        data['Arayat'].provinces.forEach(province => {
-            const option = document.createElement('option');
-            option.value = province;
-            option.text = province;
-            provinceSelect.appendChild(option);
-        });
-    } else if (selectedCity === 'Nueva Ecija') {
-        provinceSelect.disabled = false;
-        data['Nueva Ecija'].provinces.forEach(province => {
+        data[selectedCity].provinces.forEach(province => {
             const option = document.createElement('option');
             option.value = province;
             option.text = province;
@@ -579,17 +651,9 @@ function updateRegions() {
     document.getElementById('address_region').disabled = true;
     document.getElementById('nationality').disabled = true;
 
-    if (selectedCity === 'Arayat') {
+    if (['Arayat', 'Nueva Ecija', 'Magalang', 'Mexico', 'Santa Ana', 'San Fernando', 'Candaba'].includes(selectedCity)) {
         regionSelect.disabled = false;
-        data['Arayat'].regions.forEach(region => {
-            const option = document.createElement('option');
-            option.value = region;
-            option.text = region;
-            regionSelect.appendChild(option);
-        });
-    } else if (selectedCity === 'Nueva Ecija') {
-        regionSelect.disabled = false;
-        data['Nueva Ecija'].regions.forEach(region => {
+        data[selectedCity].regions.forEach(region => {
             const option = document.createElement('option');
             option.value = region;
             option.text = region;
@@ -607,17 +671,9 @@ function updateNationalities() {
 
     document.getElementById('nationality').disabled = true;
 
-    if (selectedCity === 'Arayat') {
+    if (['Arayat', 'Nueva Ecija', 'Magalang', 'Mexico', 'Santa Ana', 'San Fernando', 'Candaba'].includes(selectedCity)) {
         nationalitySelect.disabled = false;
-        data['Arayat'].nationalities.forEach(nationality => {
-            const option = document.createElement('option');
-            option.value = nationality;
-            option.text = nationality;
-            nationalitySelect.appendChild(option);
-        });
-    } else if (selectedCity === 'Nueva Ecija') {
-        nationalitySelect.disabled = false;
-        data['Nueva Ecija'].nationalities.forEach(nationality => {
+        data[selectedCity].nationalities.forEach(nationality => {
             const option = document.createElement('option');
             option.value = nationality;
             option.text = nationality;
