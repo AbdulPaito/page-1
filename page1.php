@@ -318,7 +318,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <select id="address_city_municipality" name="address_city_municipality" onchange="updateBarangays()">
                         <option value="">Select City/Municipality</option>
                         <option value="Arayat">Arayat</option>
-                        <option value="Nueva Ecija">Nueva Ecija</option>
+                        <option value="San Vicente">San Vicente</option>
+                        <option value="Cabiao">Cabiao</option>
                         <option value="Magalang">Magalang</option>
                         <option value="Magalang">Magalang</option>
                         <option value="Mexico">Mexico</option>
@@ -415,32 +416,81 @@ const data = {
             'Region 11', 'Region 12', 'Region 13', 'Region 14', 'Region 15', 
             'Region 16', 'Region 17', 'Region 18'
         ],
-        nationalities: ['Filipino']
+        nationalities: ['Filipino', 'Chinese', 'Japanese', 'Korean', 'Foreigner', 'American', 
+            'British', 'Australian', 'Canadian', 'German', 'French', 'Italian', 
+            'Russian', 'Indian', 'Mexican', 'Brazilian', 'Thai', 'Indonesian', 
+            'Vietnamese', 'South African']
     },
-    'Nueva Ecija': {
+    'San Vicente': {
         barangays: [
-            'Barangay 1', 'Barangay 2', 'Barangay 3' // Replace with actual barangays
+            'Arenas', 'Baliti', 'Batasan', 'Buensuceso', 'Candating', 'Gatiawin', 
+            'Guemasan', 'La Paz (Turu)'
         ],
         streets: [
-            'Street A', 'Street B', 'Street C' // Replace with actual streets
+            'Street 1', 'Street 2', 'Street 3', 'Street 4', 'Street 5', 'Street 6', 
+            'Street 7', 'Street 8', 'Street 9', 'Street 10', 'Street 11', 'Street 12', 
+            'Street 13', 'Street 14', 'Street 15', 'Street 16', 'Street 17', 'Street 18', 
+            'Street 19', 'Street 20'
         ],
         districts: [
-            'District A', 'District B' // Replace with actual districts
+            'District 1', 'District 2', 'District 3', 'District 4', 'District 5', 
+            'District 6', 'District 7', 'District 8', 'District 9', 'District 10', 
+            'District 11', 'District 12', 'District 13', 'District 14', 'District 15', 
+            'District 16', 'District 17', 'District 18', 'District 19', 'District 20'
         ],
         provinces: [
             'Nueva Ecija'
         ],
         regions: [
-            'Region 3' // Replace with actual regions
+            'Region 1', 'Region 2', 'Region 3', 'Region 4', 'Region 5', 
+            'Region 6', 'Region 7', 'Region 8', 'Region 9', 'Region 10', 
+            'Region 11', 'Region 12', 'Region 13', 'Region 14', 'Region 15', 
+            'Region 16', 'Region 17', 'Region 18'
         ],
-        nationalities: ['Filipino']
+        nationalities: ['Filipino', 'Chinese', 'Japanese', 'Korean', 'Foreigner', 'American', 
+            'British', 'Australian', 'Canadian', 'German', 'French', 'Italian', 
+            'Russian', 'Indian', 'Mexican', 'Brazilian', 'Thai', 'Indonesian', 
+            'Vietnamese', 'South African']
+    },
+    'Cabiao': {
+        barangays: [
+            'Barangay 1', 'Barangay 2', 'Barangay 3' // Replace with actual barangays
+        ],
+        streets: [
+            'Street 1', 'Street 2', 'Street 3', 'Street 4', 'Street 5', 'Street 6', 
+            'Street 7', 'Street 8', 'Street 9', 'Street 10', 'Street 11', 'Street 12', 
+            'Street 13', 'Street 14', 'Street 15', 'Street 16', 'Street 17', 'Street 18', 
+            'Street 19', 'Street 20'
+        ],
+        districts: [
+            'District 1', 'District 2', 'District 3', 'District 4', 'District 5', 
+            'District 6', 'District 7', 'District 8', 'District 9', 'District 10', 
+            'District 11', 'District 12', 'District 13', 'District 14', 'District 15', 
+            'District 16', 'District 17', 'District 18', 'District 19', 'District 20'
+        ],
+        provinces: [
+            'Nueva Ecija'
+        ],
+        regions: [
+            'Region 1', 'Region 2', 'Region 3', 'Region 4', 'Region 5', 
+            'Region 6', 'Region 7', 'Region 8', 'Region 9', 'Region 10', 
+            'Region 11', 'Region 12', 'Region 13', 'Region 14', 'Region 15', 
+            'Region 16', 'Region 17', 'Region 18'
+        ],
+        nationalities: ['Filipino', 'Chinese', 'Japanese', 'Korean', 'Foreigner', 'American', 
+            'British', 'Australian', 'Canadian', 'German', 'French', 'Italian', 
+            'Russian', 'Indian', 'Mexican', 'Brazilian', 'Thai', 'Indonesian', 
+            'Vietnamese', 'South African']
     },
     'Magalang': {
         barangays: [
             'Barangay Magalang 1', 'Barangay Magalang 2' // Replace with actual barangays
         ],
         streets: [
-            'Street Magalang A', 'Street Magalang B' // Replace with actual streets
+            'Street 1', 'Street 2', 'Street 3', 'Street 4', 'Street 5', 'Street 6', 
+            'Street 7', 'Street 8', 'Street 9', 'Street 10', 'Street 11', 'Street 12', 
+            'Street 13', 'Street 14', 'Street 15', 'Street 16', 'Street 17', 'Street 18', 
+            'Street 19', 'Street 20'
         ],
         districts: [
             'District Magalang A', 'District Magalang B' // Replace with actual districts
@@ -449,81 +499,135 @@ const data = {
             'Pampanga'
         ],
         regions: [
-            'Region 3' // Replace with actual regions
+           'Region 1', 'Region 2', 'Region 3', 'Region 4', 'Region 5', 
+            'Region 6', 'Region 7', 'Region 8', 'Region 9', 'Region 10', 
+            'Region 11', 'Region 12', 'Region 13', 'Region 14', 'Region 15', 
+            'Region 16', 'Region 17', 'Region 18'
         ],
-        nationalities: ['Filipino']
+        nationalities: ['Filipino', 'Chinese', 'Japanese', 'Korean', 'Foreigner', 'American', 
+            'British', 'Australian', 'Canadian', 'German', 'French', 'Italian', 
+            'Russian', 'Indian', 'Mexican', 'Brazilian', 'Thai', 'Indonesian', 
+            'Vietnamese', 'South African']
     },
     'Mexico': {
         barangays: [
             'Barangay Mexico 1', 'Barangay Mexico 2' // Replace with actual barangays
         ],
         streets: [
-            'Street Mexico A', 'Street Mexico B' // Replace with actual streets
+            'Street 1', 'Street 2', 'Street 3', 'Street 4', 'Street 5', 'Street 6', 
+            'Street 7', 'Street 8', 'Street 9', 'Street 10', 'Street 11', 'Street 12', 
+            'Street 13', 'Street 14', 'Street 15', 'Street 16', 'Street 17', 'Street 18', 
+            'Street 19', 'Street 20'
         ],
         districts: [
-            'District Mexico A', 'District Mexico B' // Replace with actual districts
+            'District 1', 'District 2', 'District 3', 'District 4', 'District 5', 
+            'District 6', 'District 7', 'District 8', 'District 9', 'District 10', 
+            'District 11', 'District 12', 'District 13', 'District 14', 'District 15', 
+            'District 16', 'District 17', 'District 18', 'District 19', 'District 20'
         ],
         provinces: [
             'Pampanga'
         ],
         regions: [
-            'Region 3' // Replace with actual regions
+           'Region 1', 'Region 2', 'Region 3', 'Region 4', 'Region 5', 
+            'Region 6', 'Region 7', 'Region 8', 'Region 9', 'Region 10', 
+            'Region 11', 'Region 12', 'Region 13', 'Region 14', 'Region 15', 
+            'Region 16', 'Region 17', 'Region 18'
         ],
-        nationalities: ['Filipino']
+        nationalities: ['Filipino', 'Chinese', 'Japanese', 'Korean', 'Foreigner', 'American', 
+            'British', 'Australian', 'Canadian', 'German', 'French', 'Italian', 
+            'Russian', 'Indian', 'Mexican', 'Brazilian', 'Thai', 'Indonesian', 
+            'Vietnamese', 'South African']
  },
     'Santa Ana': {
         barangays: [
             'Barangay Santa Ana 1', 'Barangay Santa Ana 2' // Replace with actual barangays
         ],
         streets: [
-            'Street Santa Ana A', 'Street Santa Ana B' // Replace with actual streets
+           'Street 1', 'Street 2', 'Street 3', 'Street 4', 'Street 5', 'Street 6', 
+            'Street 7', 'Street 8', 'Street 9', 'Street 10', 'Street 11', 'Street 12', 
+            'Street 13', 'Street 14', 'Street 15', 'Street 16', 'Street 17', 'Street 18', 
+            'Street 19', 'Street 20'
         ],
         districts: [
-            'District Santa Ana A', 'District Santa Ana B' // Replace with actual districts
+            'District 1', 'District 2', 'District 3', 'District 4', 'District 5', 
+            'District 6', 'District 7', 'District 8', 'District 9', 'District 10', 
+            'District 11', 'District 12', 'District 13', 'District 14', 'District 15', 
+            'District 16', 'District 17', 'District 18', 'District 19', 'District 20'
         ],
         provinces: [
             'Pampanga'
         ],
         regions: [
-            'Region 3' // Replace with actual regions
+            'Region 1', 'Region 2', 'Region 3', 'Region 4', 'Region 5', 
+            'Region 6', 'Region 7', 'Region 8', 'Region 9', 'Region 10', 
+            'Region 11', 'Region 12', 'Region 13', 'Region 14', 'Region 15', 
+            'Region 16', 'Region 17', 'Region 18'
         ],
-        nationalities: ['Filipino']
+        nationalities: ['Filipino', 'Chinese', 'Japanese', 'Korean', 'Foreigner', 'American', 
+            'British', 'Australian', 'Canadian', 'German', 'French', 'Italian', 
+            'Russian', 'Indian', 'Mexican', 'Brazilian', 'Thai', 'Indonesian', 
+            'Vietnamese', 'South African']
     },
     'San Fernando': {
         barangays: [
             'Barangay San Fernando 1', 'Barangay San Fernando 2' // Replace with actual barangays
         ],
         streets: [
-            'Street San Fernando A', 'Street San Fernando B' // Replace with actual streets
+          'Street 1', 'Street 2', 'Street 3', 'Street 4', 'Street 5', 'Street 6', 
+            'Street 7', 'Street 8', 'Street 9', 'Street 10', 'Street 11', 'Street 12', 
+            'Street 13', 'Street 14', 'Street 15', 'Street 16', 'Street 17', 'Street 18', 
+            'Street 19', 'Street 20'
         ],
         districts: [
-            'District San Fernando A', 'District San Fernando B' // Replace with actual districts
+            'District 1', 'District 2', 'District 3', 'District 4', 'District 5', 
+            'District 6', 'District 7', 'District 8', 'District 9', 'District 10', 
+            'District 11', 'District 12', 'District 13', 'District 14', 'District 15', 
+            'District 16', 'District 17', 'District 18', 'District 19', 'District 20'
         ],
         provinces: [
             'Pampanga'
         ],
         regions: [
-            'Region 3' // Replace with actual regions
+            'Region 1', 'Region 2', 'Region 3', 'Region 4', 'Region 5', 
+            'Region 6', 'Region 7', 'Region 8', 'Region 9', 'Region 10', 
+            'Region 11', 'Region 12', 'Region 13', 'Region 14', 'Region 15', 
+            'Region 16', 'Region 17', 'Region 18'
         ],
-        nationalities: ['Filipino']
+        nationalities: ['Filipino', 'Chinese', 'Japanese', 'Korean', 'Foreigner', 'American', 
+            'British', 'Australian', 'Canadian', 'German', 'French', 'Italian', 
+            'Russian', 'Indian', 'Mexican', 'Brazilian', 'Thai', 'Indonesian', 
+            'Vietnamese', 'South African']
     },
     'Candaba': {
         barangays: [
             'Barangay Candaba 1', 'Barangay Candaba 2' // Replace with actual barangays
         ],
         streets: [
-            'Street Candaba A', 'Street Candaba B' // Replace with actual streets
+            'Street 1', 'Street 2', 'Street 3', 'Street 4', 'Street 5', 'Street 6', 
+            'Street 7', 'Street 8', 'Street 9', 'Street 10', 'Street 11', 'Street 12', 
+            'Street 13', 'Street 14', 'Street 15', 'Street 16', 'Street 17', 'Street 18', 
+            'Street 19', 'Street 20'
         ],
         districts: [
-            'District Candaba A', 'District Candaba B' // Replace with actual districts
+            'District 1', 'District 2', 'District 3', 'District 4', 'District 5', 
+            'District 6', 'District 7', 'District 8', 'District 9', 'District 10', 
+            'District 11', 'District 12', 'District 13', 'District 14', 'District 15', 
+            'District 16', 'District 17', 'District 18', 'District 19', 'District 20'
         ],
         provinces: [
             'Pampanga'
         ],
         regions: [
-            'Region 3' // Replace with actual regions
+            'Region 1', 'Region 2', 'Region 3', 'Region 4', 'Region 5', 
+            'Region 6', 'Region 7', 'Region 8', 'Region 9', 'Region 10', 
+            'Region 11', 'Region 12', 'Region 13', 'Region 14', 'Region 15', 
+            'Region 16', 'Region 17', 'Region 18'
         ],
-        nationalities: ['Filipino']
+        nationalities: ['Filipino', 'Chinese', 'Japanese', 'Korean', 'Foreigner', 'American', 
+            'British', 'Australian', 'Canadian', 'German', 'French', 'Italian', 
+            'Russian', 'Indian', 'Mexican', 'Brazilian', 'Thai', 'Indonesian', 
+            'Vietnamese', 'South African']
     }
 };
 
@@ -579,7 +683,7 @@ function updateStreets() {
     document.getElementById('address_region').disabled = true;
     document.getElementById('nationality').disabled = true;
 
-    if (['Arayat', 'Nueva Ecija', 'Magalang', 'Mexico', 'Santa Ana', 'San Fernando', 'Candaba'].includes(selectedCity)) {
+    if (['Arayat', 'San Vicente', 'Cabiao', 'Magalang',  'Mexico', 'Santa Ana', 'San Fernando', 'Candaba'].includes(selectedCity)) {
         streetSelect.disabled = false;
         data[selectedCity].streets.forEach(street => {
             const option = document.createElement('option');
@@ -605,7 +709,7 @@ function updateDistricts() {
     document.getElementById('address_region').disabled = true;
     document.getElementById('nationality').disabled = true;
 
-    if (['Arayat', 'Nueva Ecija', 'Magalang', 'Mexico', 'Santa Ana', 'San Fernando', 'Candaba'].includes(selectedCity)) {
+    if (['Arayat', 'San Vicente', 'Cabiao', 'Magalang', 'Mexico', 'Santa Ana', 'San Fernando', 'Candaba'].includes(selectedCity)) {
         districtSelect.disabled = false;
         data[selectedCity].districts.forEach(district => {
             const option = document.createElement('option');
@@ -629,7 +733,7 @@ function updateProvinces() {
     document.getElementById('address_region').disabled = true;
     document.getElementById('nationality').disabled = true;
 
-    if (['Arayat', 'Nueva Ecija', 'Magalang', 'Mexico', 'Santa Ana', 'San Fernando', 'Candaba'].includes(selectedCity)) {
+    if (['Arayat','San Vicente', 'Cabiao', 'Magalang', 'Mexico', 'Santa Ana', 'San Fernando', 'Candaba'].includes(selectedCity)) {
         provinceSelect.disabled = false;
         data[selectedCity].provinces.forEach(province => {
             const option = document.createElement('option');
@@ -651,7 +755,7 @@ function updateRegions() {
     document.getElementById('address_region').disabled = true;
     document.getElementById('nationality').disabled = true;
 
-    if (['Arayat', 'Nueva Ecija', 'Magalang', 'Mexico', 'Santa Ana', 'San Fernando', 'Candaba'].includes(selectedCity)) {
+    if (['Arayat', 'San Vicente', 'Cabiao', 'Magalang', 'Mexico', 'Santa Ana', 'San Fernando', 'Candaba'].includes(selectedCity)) {
         regionSelect.disabled = false;
         data[selectedCity].regions.forEach(region => {
             const option = document.createElement('option');
@@ -671,7 +775,7 @@ function updateNationalities() {
 
     document.getElementById('nationality').disabled = true;
 
-    if (['Arayat', 'Nueva Ecija', 'Magalang', 'Mexico', 'Santa Ana', 'San Fernando', 'Candaba'].includes(selectedCity)) {
+    if (['Arayat', 'San Vicente', 'Cabiao', 'Magalang', 'Mexico', 'Santa Ana', 'San Fernando', 'Candaba'].includes(selectedCity)) {
         nationalitySelect.disabled = false;
         data[selectedCity].nationalities.forEach(nationality => {
             const option = document.createElement('option');
